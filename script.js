@@ -997,7 +997,7 @@
       });
 
       window.addEventListener('resize', () => {
-        if (window.innerWidth > 960 && mobileDrawer.classList.contains('open')) {
+        if (window.innerWidth > 768 && mobileDrawer.classList.contains('open')) {
           closeMobileMenu();
         }
       });
