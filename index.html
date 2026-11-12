@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WanderLuxe | Curated Global Travel & Luxury Stays</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- AOS (Animate On Scroll) Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ========================================================================
+       1. HEADER & STICKY NAVIGATION
+       ======================================================================== -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand">
+                <span class="brand-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" />
+                    </svg>
+                </span>
+                WanderLuxe
+            </a>
+
+            <nav aria-label="Primary Navigation">
+                <ul class="nav-links">
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#hotels">Hotels</a></li>
+                    <li><a href="#offers">Special Offers</a></li>
+                    <li><a href="#why-us">Why Us</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button type="button" class="wishlist-btn" id="openWishlistBtn" aria-label="Open Saved Wishlist">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color: var(--danger);">
+                        <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                    <span>Wishlist</span>
+                    <span class="wishlist-badge" id="wishlistCount">0</span>
+                </button>
+
+                <a href="#hotels" class="btn btn-primary nav-cta-btn">Book Now</a>
+
+                <button type="button" class="hamburger-btn" id="openMobileNavBtn" aria-label="Open Menu"
+                    aria-expanded="false" aria-controls="mobileDrawer">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.2">
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+        <div class="drawer-backdrop" id="closeMobileNavBackdrop"></div>
+        <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+            <div class="drawer-header">
+                <a href="#" class="brand mobile-link" style="font-size: 1.35rem;">
+                    <span class="brand-icon" style="width: 32px; height: 32px;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" />
+                        </svg>
+                    </span>
+                    WanderLuxe
+                </a>
+                <button type="button" class="drawer-close-btn" id="closeMobileNavBtn"
+                    aria-label="Close Navigation Menu">&times;</button>
+            </div>
+
+            <ul class="mobile-nav-list">
+                <li><a href="#destinations" class="mobile-link">Destinations <span>→</span></a></li>
+                <li><a href="#hotels" class="mobile-link">Hotels <span>→</span></a></li>
+                <li><a href="#offers" class="mobile-link">Special Offers <span>→</span></a></li>
+                <li><a href="#why-us" class="mobile-link">Why Us <span>→</span></a></li>
+                <li><a href="#testimonials" class="mobile-link">Testimonials <span>→</span></a></li>
+            </ul>
+
+            <div class="drawer-footer-actions">
+                <a href="#hotels" class="btn btn-primary mobile-link" style="width: 100%;">Explore &amp; Book Stays</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================================
+       2. HERO SECTION WITH CLASSY BACKGROUND VIDEO & SEARCH WIDGET
+       ======================================================================== -->
+    <section class="hero">
+        <!-- Classy Autoplay Looping Luxury Resort Background Video -->
+        <video class="hero-video" autoplay muted loop playsinline
+            poster="https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1920&q=80">
+            <source
+                src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-luxury-resort-by-the-sea-42632-large.mp4"
+                type="video/mp4" />
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-waves-coming-to-the-beach-5016-large.mp4"
+                type="video/mp4" />
+        </video>
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+            <div class="hero-badge" data-aos="fade-down">
+                <span>✨ Exclusive 2026 Luxury Escapes &amp; Curated Stays</span>
+            </div>
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                Discover Extraordinarily Curated Stays Across the Globe
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                From cliffside villas in Santorini to serene ryokans in Kyoto—compare handpicked boutique hotels and
+                calculate instant transparent pricing.
+            </p>
+
+            <!-- Functional Booking & Search Widget -->
+            <form class="search-widget" id="heroSearchForm" data-aos="fade-up" data-aos-delay="300" novalidate>
+                <div class="search-grid">
+                    <!-- Destination Autocomplete -->
+                    <div class="search-field">
+                        <label for="destinationInput">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            Destination
+                        </label>
+                        <div class="search-input-wrap">
+                            <input type="text" id="destinationInput" class="search-control"
+                                placeholder="Where are you going? (e.g., Bali, Paris)" autocomplete="off" />
+                            <div class="autocomplete-list" id="autocompleteList"></div>
+                        </div>
+                    </div>
+
+                    <!-- Check-in Date -->
+                    <div class="search-field">
+                        <label for="checkinInput">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                            Check-In
+                        </label>
+                        <input type="date" id="checkinInput" class="search-control" required />
+                    </div>
+
+                    <!-- Check-out Date -->
+                    <div class="search-field">
+                        <label for="checkoutInput">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                            Check-Out
+                        </label>
+                        <input type="date" id="checkoutInput" class="search-control" required />
+                    </div>
+
+                    <!-- Guests & Rooms Popover Selector -->
+                    <div class="search-field">
+                        <label>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                            Guests &amp; Rooms
+                        </label>
+                        <button type="button" id="guestTriggerBtn" class="search-control guest-trigger">
+                            <span id="guestSummaryText">2 Adults, 0 Children · 1 Room</span>
+                            <span>▾</span>
+                        </button>
+
+                        <div class="guest-popover" id="guestPopover">
+                            <div class="counter-row">
+                                <div class="counter-info">
+                                    <strong>Adults</strong>
+                                    <span>Ages 13+</span>
+                                </div>
+                                <div class="counter-controls">
+                                    <button type="button" class="counter-btn" data-type="adults"
+                                        data-action="dec">−</button>
+                                    <span id="adultsCount">2</span>
+                                    <button type="button" class="counter-btn" data-type="adults"
+                                        data-action="inc">+</button>
+                                </div>
+                            </div>
+                            <div class="counter-row">
+                                <div class="counter-info">
+                                    <strong>Children</strong>
+                                    <span>Ages 0–12</span>
+                                </div>
+                                <div class="counter-controls">
+                                    <button type="button" class="counter-btn" data-type="children"
+                                        data-action="dec">−</button>
+                                    <span id="childrenCount">0</span>
+                                    <button type="button" class="counter-btn" data-type="children"
+                                        data-action="inc">+</button>
+                                </div>
+                            </div>
+                            <div class="counter-row">
+                                <div class="counter-info">
+                                    <strong>Rooms</strong>
+                                    <span>Max 8 rooms</span>
+                                </div>
+                                <div class="counter-controls">
+                                    <button type="button" class="counter-btn" data-type="rooms"
+                                        data-action="dec">−</button>
+                                    <span id="roomsCount">1</span>
+                                    <button type="button" class="counter-btn" data-type="rooms"
+                                        data-action="inc">+</button>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary" id="closeGuestPopoverBtn"
+                                style="width: 100%; margin-top: 0.75rem; padding: 0.5rem;">Done</button>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary search-submit-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                        Search Stays
+                    </button>
+                </div>
+
+                <div class="search-feedback">
+                    <span class="error-text" id="dateErrorMsg" role="alert"></span>
+                    <span class="nights-badge" id="nightsSummaryBadge">3 Nights Selected</span>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       3. POPULAR DESTINATIONS SECTION
+       ======================================================================== -->
+    <section class="section" id="destinations">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Explore The World</span>
+                <h2 class="section-title">Popular Destinations</h2>
+                <p class="section-subtitle">Filter by travel vibe or click any destination card to immediately view
+                    available luxury hotels.</p>
+            </div>
+
+            <!-- Category Filter Pills -->
+            <div class="filter-pills" id="destFilterPills" data-aos="fade-up" data-aos-delay="100">
+                <button type="button" class="pill-btn active" data-category="All">All Destinations</button>
+                <button type="button" class="pill-btn" data-category="Beach">Beach &amp; Islands</button>
+                <button type="button" class="pill-btn" data-category="Mountain">Mountain Retreats</button>
+                <button type="button" class="pill-btn" data-category="City">Iconic Cities</button>
+                <button type="button" class="pill-btn" data-category="Heritage">Heritage &amp; Culture</button>
+            </div>
+
+            <!-- Dynamic Destination Cards Container -->
+            <div class="destinations-grid" id="destinationsGrid"></div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       4. FEATURED HOTELS & DYNAMIC FILTER/SORT SECTION
+       ======================================================================== -->
+    <section class="section hotels-section" id="hotels">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Handpicked Collection</span>
+                <h2 class="section-title">Featured Hotels &amp; Resorts</h2>
+                <p class="section-subtitle">Filter by destination, nightly budget, and guest rating—or launch our
+                    interactive price estimator on any property.</p>
+            </div>
+
+            <!-- Filter & Sort Toolbar -->
+            <div class="hotel-toolbar" data-aos="fade-up">
+                <div class="toolbar-group">
+                    <label for="filterDestination">Destination</label>
+                    <select id="filterDestination" class="toolbar-select">
+                        <option value="All">All Destinations</option>
+                    </select>
+                </div>
+
+                <div class="toolbar-group">
+                    <label for="filterMaxPrice">
+                        <span>Max Price / Night</span>
+                        <strong id="maxPriceLabel" style="color: var(--primary);">$800</strong>
+                    </label>
+                    <input type="range" id="filterMaxPrice" class="price-slider" min="150" max="800" step="25"
+                        value="800" />
+                </div>
+
+                <div class="toolbar-group">
+                    <label for="filterRating">Minimum Rating</label>
+                    <select id="filterRating" class="toolbar-select">
+                        <option value="0">All Star Ratings</option>
+                        <option value="4.0">4.0+ Stars</option>
+                        <option value="4.5">4.5+ Stars</option>
+                        <option value="4.8">4.8+ Exceptional</option>
+                    </select>
+                </div>
+
+                <div class="toolbar-group">
+                    <label for="sortHotels">Sort By</label>
+                    <select id="sortHotels" class="toolbar-select">
+                        <option value="recommended">Recommended</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="rating-desc">Highest Rated</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Dynamic Hotel Cards Grid -->
+            <div class="hotels-grid" id="hotelsGrid"></div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       5. SPECIAL OFFERS & PROMOTIONAL COUPONS
+       ======================================================================== -->
+    <section class="section" id="offers">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Limited-Time Privileges</span>
+                <h2 class="section-title">Special Offers &amp; Promo Codes</h2>
+                <p class="section-subtitle">Copy an exclusive promo code below and apply it directly inside the Hotel
+                    Booking Price Estimator.</p>
+            </div>
+
+            <div class="offers-grid" id="offersGrid"></div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       6. WHY CHOOSE US
+       ======================================================================== -->
+    <section class="section" id="why-us" style="padding-top: 1rem;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">The WanderLuxe Standard</span>
+                <h2 class="section-title">Why Travelers Choose Us</h2>
+                <p class="section-subtitle">Every booking is backed by transparent pricing, verified luxury inspections,
+                    and round-the-clock concierge care.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                    </div>
+                    <h3>Best Price Guarantee</h3>
+                    <p>Find a lower identical rate elsewhere within 24 hours and we will match it plus take an extra 10%
+                        off.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                    </div>
+                    <h3>24/7 Global Support</h3>
+                    <p>Dedicated multilingual travel specialists ready to assist you anytime across any timezone.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                    </div>
+                    <h3>Handpicked Stays</h3>
+                    <p>Less than 5% of reviewed properties pass our 50-point hospitality, design, and comfort audit.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M9 11l3 3L22 4" />
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                        </svg>
+                    </div>
+                    <h3>Instant Free Cancellation</h3>
+                    <p>Flexible plans with zero-fee cancellation up to 48 hours prior to check-in on 90% of stays.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       7. CUSTOMER TESTIMONIALS SLIDER
+       ======================================================================== -->
+    <section class="section testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Verified Guest Stories</span>
+                <h2 class="section-title">What Our Travelers Say</h2>
+                <p class="section-subtitle">Real stories from guests who booked their dream getaways with WanderLuxe.
+                </p>
+            </div>
+
+            <div class="slider-wrapper" id="testimonialSlider" data-aos="fade-up">
+                <div class="slider-track" id="testimonialTrack"></div>
+
+                <div class="slider-controls">
+                    <button type="button" class="slider-arrow" id="prevTestimonialBtn"
+                        aria-label="Previous Testimonial">←</button>
+                    <div class="slider-dots" id="testimonialDots"></div>
+                    <button type="button" class="slider-arrow" id="nextTestimonialBtn"
+                        aria-label="Next Testimonial">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       8. NEWSLETTER SUBSCRIPTION BANNER
+       ======================================================================== -->
+    <section class="section" id="newsletter" style="padding-bottom: 2rem;">
+        <div class="container">
+            <div class="newsletter-banner" data-aos="zoom-in">
+                <h2>Unlock Secret Member Rates &amp; Travel Inspiration</h2>
+                <p>Subscribe to receive weekly curated itineraries and private flash sales up to 35% off luxury hotels.
+                </p>
+
+                <form class="newsletter-form" id="newsletterForm" novalidate>
+                    <input type="email" id="newsletterEmail" class="newsletter-input"
+                        placeholder="Enter your email address..." aria-label="Email address" required />
+                    <button type="submit" class="btn btn-accent"
+                        style="height: 50px; padding: 0 1.75rem;">Subscribe</button>
+                </form>
+                <div class="newsletter-status" id="newsletterStatus" role="status"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       9. FOOTER
+       ======================================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#hotels">Hotels</a></li>
+                        <li><a href="#offers">Special Offers</a></li>
+                        <li><a href="#why-us">Why Us</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Top Destinations</h4>
+                    <ul>
+                        <li><a href="#hotels" class="footer-dest-link" data-dest="Bali">Bali, Indonesia</a></li>
+                        <li><a href="#hotels" class="footer-dest-link" data-dest="Swiss Alps">Zermatt, Swiss Alps</a>
+                        </li>
+                        <li><a href="#hotels" class="footer-dest-link" data-dest="Kyoto">Kyoto, Japan</a></li>
+                        <li><a href="#hotels" class="footer-dest-link" data-dest="Santorini">Santorini, Greece</a></li>
+                        <li><a href="#hotels" class="footer-dest-link" data-dest="Udaipur">Udaipur, India</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Concierge &amp; Support</h4>
+                    <ul>
+                        <li>24/7 Desk: +1 (800) 555-LUXE</li>
+                        <li>concierge@wanderluxe.example</li>
+                        <li>Free Cancellation Policy</li>
+                        <li>Privacy &amp; Cookie Settings</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 WanderLuxe Travel Inc. All rights reserved.</span>
+                <span>Built with HTML5, Modern CSS &amp; Vanilla JavaScript</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================================================
+       DYNAMIC BOOKING & PRICE ESTIMATOR MODAL
+       ======================================================================== -->
+    <div class="modal-overlay" id="bookingModal" aria-hidden="true">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div>
+                    <span class="section-tag" style="margin-bottom: 0.35rem;" id="modalHotelLocation">Destination</span>
+                    <h3 id="modalHotelName" style="font-size: 1.45rem;">Hotel Name</h3>
+                </div>
+                <button type="button" class="close-modal-btn" id="closeBookingModalBtn"
+                    aria-label="Close Modal">&times;</button>
+            </div>
+
+            <form id="modalBookingForm" novalidate>
+                <div class="booking-grid">
+                    <div class="search-field">
+                        <label for="modalCheckin">Check-In Date</label>
+                        <input type="date" id="modalCheckin" class="search-control" required />
+                    </div>
+                    <div class="search-field">
+                        <label for="modalCheckout">Check-Out Date</label>
+                        <input type="date" id="modalCheckout" class="search-control" required />
+                    </div>
+                    <div class="search-field">
+                        <label for="modalRooms">Number of Rooms</label>
+                        <input type="number" id="modalRooms" class="search-control" min="1" max="8" value="1"
+                            required />
+                    </div>
+                    <div class="search-field">
+                        <label for="modalGuests">Total Guests</label>
+                        <input type="number" id="modalGuests" class="search-control" min="1" max="20" value="2"
+                            required />
+                    </div>
+                </div>
+
+                <div class="search-field" style="margin-bottom: 0.5rem;">
+                    <label for="modalPromoInput">Promo Coupon Code (Try: WANDER20, SUMMER15, LUXE25)</label>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <input type="text" id="modalPromoInput" class="search-control" placeholder="Enter coupon code"
+                            style="text-transform: uppercase;" />
+                        <button type="button" class="btn btn-outline" id="applyPromoBtn">Apply</button>
+                    </div>
+                    <small id="modalPromoFeedback" style="font-weight: 600;"></small>
+                </div>
+
+                <div class="price-breakdown">
+                    <div class="breakdown-row">
+                        <span id="calcBaseLabel">$0 × 1 night × 1 room</span>
+                        <strong id="calcBaseAmount">$0</strong>
+                    </div>
+                    <div class="breakdown-row">
+                        <span>Taxes &amp; Resort Service Fees (12%)</span>
+                        <strong id="calcTaxAmount">$0</strong>
+                    </div>
+                    <div class="breakdown-row" id="calcDiscountRow" style="display: none; color: var(--success);">
+                        <span id="calcDiscountLabel">Promo Discount</span>
+                        <strong id="calcDiscountAmount">-$0</strong>
+                    </div>
+                    <div class="breakdown-total">
+                        <span>Estimated Total</span>
+                        <span id="calcTotalAmount" style="color: var(--primary);">$0</span>
+                    </div>
+                </div>
+
+                <p class="error-text" id="modalDateError" style="margin-bottom: 0.75rem;"></p>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; height: 48px; font-size: 1rem;">
+                    Confirm Instant Reservation
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========================================================================
+       WISHLIST MODAL DRAWER
+       ======================================================================== -->
+    <div class="modal-overlay" id="wishlistModal" aria-hidden="true">
+        <div class="modal-card" style="max-width: 500px;">
+            <div class="modal-header">
+                <div>
+                    <h3 style="font-size: 1.4rem;">Your Saved Wishlist</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Persisted locally in your browser</p>
+                </div>
+                <button type="button" class="close-modal-btn" id="closeWishlistModalBtn"
+                    aria-label="Close Wishlist">&times;</button>
+            </div>
+            <div id="wishlistItemsContainer"></div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toastNotification" role="status" aria-live="polite"></div>
+
+    <!-- AOS (Animate On Scroll) Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
