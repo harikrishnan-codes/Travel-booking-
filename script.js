@@ -20,7 +20,7 @@
           category: 'Beach',
           startingPrice: 185,
           properties: 142,
-          image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=80'
+          image: './assets/img 1.webp'
         },
         {
           id: 'swiss-alps',
@@ -29,7 +29,7 @@
           category: 'Mountain',
           startingPrice: 340,
           properties: 86,
-          image: 'https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=900&q=80'
+          image: './assets/img 2.webp'
         },
         {
           id: 'kyoto',
@@ -38,7 +38,7 @@
           category: 'Heritage',
           startingPrice: 260,
           properties: 118,
-          image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=80'
+          image: './assets/img 3.webp'
         },
         {
           id: 'santorini',
@@ -47,7 +47,7 @@
           category: 'Beach',
           startingPrice: 310,
           properties: 94,
-          image: 'https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?auto=format&fit=crop&w=900&q=80'
+          image: './assets/img 4.webp'
         },
         {
           id: 'paris',
@@ -56,7 +56,7 @@
           category: 'City',
           startingPrice: 295,
           properties: 215,
-          image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=80'
+          image: './assets/img 5.webp'
         },
         {
           id: 'udaipur',
@@ -65,7 +65,7 @@
           category: 'Heritage',
           startingPrice: 210,
           properties: 73,
-          image: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=900&q=80'
+          image: './assets/img 6.webp'
         }
       ];
 
@@ -78,7 +78,7 @@
           price: 245,
           rating: 4.9,
           amenities: ['Private Pool', 'Ocean View', 'Spa & Yoga', 'Breakfast Included'],
-          image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80'
+          image: './assets/img 7.webp'
         },
         {
           id: 'h2',
@@ -88,7 +88,7 @@
           price: 490,
           rating: 4.8,
           amenities: ['Ski-in/Ski-out', 'Heated Thermal Pool', 'Fireplace', 'Gourmet Dining'],
-          image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80'
+          image: './assets/img 8.webp'
         },
         {
           id: 'h3',
@@ -98,7 +98,7 @@
           price: 360,
           rating: 4.9,
           amenities: ['Private Onsen', 'Kaiseki Dinner', 'Zen Garden', 'Tea Ceremony'],
-          image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80'
+          image: './assets/img 9.webp'
         },
         {
           id: 'h4',
@@ -108,7 +108,7 @@
           price: 420,
           rating: 4.8,
           amenities: ['Caldera Plunge Pool', 'Sunset Terrace', 'Airport Transfer', 'Free Wi-Fi'],
-          image: 'https://images.unsplash.com/photo-1570213489059-0aac6626cade?auto=format&fit=crop&w=800&q=80'
+          image: './assets/img 10.webp'
         },
         {
           id: 'h5',
@@ -118,7 +118,7 @@
           price: 380,
           rating: 4.7,
           amenities: ['Eiffel Views', 'Cocktail Lounge', 'Concierge', 'Pet Friendly'],
-          image: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=80'
+          image: './assets/img 11.webp'
         },
         {
           id: 'h6',
@@ -128,7 +128,7 @@
           price: 295,
           rating: 4.9,
           amenities: ['Lakefront Boat Pier', 'Royal Courtyard', 'Ayurvedic Spa', 'Rooftop Dining'],
-          image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80'
+          image: './assets/img 12.webp'
         },
         {
           id: 'h7',
@@ -138,7 +138,7 @@
           price: 195,
           rating: 4.6,
           amenities: ['Jungle View', 'Floating Breakfast', 'Infinity Pool', 'Free Shuttle'],
-          image: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=800&q=80'
+          image: './assets/img 13.webp'
         },
         {
           id: 'h8',
@@ -148,7 +148,7 @@
           price: 560,
           rating: 4.9,
           amenities: ['Panoramic Sauna', 'Heli-Ski Access', 'Wine Cellar', 'Butler Service'],
-          image: 'https://images.unsplash.com/photo-1518733057094-95b53143d2a7?auto=format&fit=crop&w=800&q=80'
+          image: './assets/img 14.webp'
         },
         {
           id: 'h9',
@@ -158,7 +158,7 @@
           price: 315,
           rating: 4.4,
           amenities: ['Balcony Suites', 'Artisan Bakery', 'Metro Nearby', '24/7 Gym'],
-          image: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80'
+          image: './assets/img 15.webp'
         },
         {
           id: 'h10',
@@ -168,7 +168,7 @@
           price: 215,
           rating: 4.5,
           amenities: ['Poolside Cabanas', 'Cultural Folk Nights', 'Heritage Architecture', 'Free Wi-Fi'],
-          image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80'
+          image: './assets/img 16.webp'
         }
       ];
 
@@ -202,42 +202,42 @@
           trip: 'Stayed at Oia Caldera Sunset Suites, Santorini',
           rating: 5,
           quote: 'The dynamic price estimator matched our final bill down to the cent, and the sunset plunge pool in Oia exceeded every expectation.',
-          avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80'
+          avatar: './assets/girl 1.webp'
         },
         {
           name: 'Marcus Vance',
           trip: 'Stayed at Matterhorn Grand Alpine Chalet, Swiss Alps',
           rating: 5,
           quote: 'WanderLuxe made planning our family ski trip effortless. Having instant room and guest calculations saved us hours of comparison.',
-          avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80'
+          avatar: './assets/boy 7.webp'
         },
         {
           name: 'Priya Nair',
           trip: 'Stayed at Lake Pichola Royal Heritage Palace, Udaipur',
           rating: 5,
           quote: 'Arriving by private boat across Lake Pichola felt like stepping into royalty. Using the WANDER20 promo code gave us remarkable value.',
-          avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80'
+          avatar: './assets/girl 4.webp'
         },
         {
           name: 'Kenji Takahashi',
           trip: 'Stayed at Uluwatu Cliffside Infinity Resort, Bali',
           rating: 5,
           quote: 'I saved five hotels to my wishlist while comparing dates, and booked Uluwatu in two clicks. The cliffside yoga pavilion is unforgettable.',
-          avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80'
+          avatar: './assets/girl 12.webp'
         },
         {
           name: 'Sophie Laurent',
           trip: 'Stayed at Arashiyama Bamboo Sanctuary Ryokan, Kyoto',
           rating: 5,
           quote: 'Authentic kaiseki dining and private cedar onsen baths—every property on WanderLuxe genuinely feels hand-vetted.',
-          avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80'
+          avatar: './assets/girl 14.webp'
         },
         {
           name: 'Daniel & Claire Brooks',
           trip: 'Stayed at Le Marais Boutique Hôtel & Spa, Paris',
           rating: 5,
           quote: 'From real-time date validation to zero hidden fees at checkout, this is how modern luxury travel booking should always work.',
-          avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80'
+          avatar: './assets/boy 12.webp'
         }
       ];
 
